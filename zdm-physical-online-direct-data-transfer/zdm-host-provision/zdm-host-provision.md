@@ -47,7 +47,7 @@ In this lab
 
    ![Image showing the option to change the image for compute](./images/os-image.png)
 
-   Select **Oracle Linux 8** and click on **Select Image**
+   Select **Oracle Linux 8** and click on **Select Image**.
 
    ![Image showing the OS image selected for compute](./images/os-selected.png)
 
@@ -101,16 +101,16 @@ In this lab
 
    libaio
 
-   oraclelinux-developer-release-el7
+   libnsl
 
    Execute the below command to identify already installed packages.
 
      ```text
      <copy>
-     yum list installed glibc-devel expect unzip libaio oraclelinux-developer-release-e17
+     yum list installed glibc-devel expect unzip libaio libnsl
      </copy>
      ```
-     You will receive an output similar to the one below which shows glibc-devel, libaio , oraclelinux-developer-release-e17 and unzip are alraady installed.
+     You will receive an output similar to the one below which shows glibc-devel, libaio , libnsl and unzip are alraady installed.
 
      ![Image showing pre installed packages for ZDM ](./images/preinstalled-package.png)
 
