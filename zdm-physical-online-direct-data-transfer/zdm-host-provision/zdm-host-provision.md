@@ -47,7 +47,7 @@ In this lab
 
    ![Image showing the option to change the image for compute](./images/os-image.png)
 
-   Select **Oracle Linux 7.9** and click on **Select Image**
+   Select **Oracle Linux 8** and click on **Select Image**
 
    ![Image showing the OS image selected for compute](./images/os-selected.png)
 
