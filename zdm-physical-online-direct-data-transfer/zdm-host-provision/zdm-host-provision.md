@@ -68,7 +68,7 @@ In this lab
    Under **Boot volume** , select **Specify a custom boot volume size** and specify 150.
 
    ![Image showing custom boot volume size](./images/boot.png)
-   
+
 10. Click on **Create** to start the provisioning of compute.
 
    In less than a few minutes ZDM compute instance will be provisioned.
@@ -106,10 +106,9 @@ In this lab
    Execute the below command to identify already installed packages.
 
      ```text
-     <copy>
      yum list installed glibc-devel expect unzip libaio libnsl
-     </copy>
      ```
+
      You will receive an output similar to the one below which shows glibc-devel, libaio , libnsl and unzip are alraady installed.
 
      ![Image showing pre installed packages for ZDM ](./images/preinstalled-package.png)
@@ -135,20 +134,19 @@ In this lab
    Execute below commands.
 
      ```text
-     <copy>
      groupadd zdm
      useradd -g zdm zdmuser
      mkdir -p /home/zdmuser/zdminstall
      mkdir /home/zdmuser/zdmhome
      mkdir /home/zdmuser/zdmbase
      chown -R zdmuser:zdm /home/
-     </copy>
      ```
+
 6. Download ZDM software.
 
    Download the ZDM software from below URL.
 
-   https://www.oracle.com/database/technologies/rac/zdm-downloads.html
+   <https://www.oracle.com/database/technologies/rac/zdm-downloads.html/>
 
 7. Upload ZDM software to ZDM host.
 
@@ -161,7 +159,7 @@ In this lab
    Switch user to **zdmuser** using below command.
 
    **sudo su - zdmuser**
-   
+
    Unzip the ZDM software under /tmp directory.
 
    Note down the directory path of unzipped folder , it will be **/tmp/zdm21.x** for **ZDM 21.x** , Please note this is a generic placeholder name for ZDM software and make sure to use the latest version available.
@@ -171,14 +169,13 @@ In this lab
    Change directory to ZDM software unzipped location using below command.
 
    cd /tmp/zdm21.x
-   
+
    Execute the below command to install ZDM software.
-   
+
      ```text
-     <copy>
      ./zdminstall.sh setup oraclehome=/home/zdmuser/zdmhome oraclebase=/home/zdmuser/zdmbase ziploc=/tmp/zdm21.x/zdm_home.zip -zdm
-     </copy>
      ```
+
      This will take couple of minutes.
 
      You will see output as below when ZDM service setup has been completed.
@@ -256,11 +253,11 @@ In this lab
    Click on **Nodes** under **Resources** section and note down the **Private IP** and **FQDN**.
 
    ![Image showing private ip and fqdn of target database](./images/target-ip-fqdn.png)
-   
+
    c. Modify **/etc/hosts** file  in ZDM service host.
 
    Open the /etc/hosts file for editing using **sudo vi /etc/hosts** command as opc user.
-   
+
    Insert Source and Target database system private IP and FQDN details to **/etc/hosts** file and save it.
 
    Sample output after editing is shown below.
@@ -297,13 +294,9 @@ In this lab
 
    ![Image showing successful ssh connectivity from zdm to target](./images/ssh-target-login.png)
 
-
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
+
 * **Author** - Amalraj Puthenchira, Cloud Data Management Modernise Specialist, EMEA Technology Cloud Engineering
 * **Last Updated By/Date** - Amalraj Puthenchira, April 2023
-
-
-
-
